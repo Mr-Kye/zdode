@@ -30,28 +30,22 @@
 		<repository>
 			<id>Nexus</id>
 			<url>http://localhost:8081/repository/maven-public/</url>
-			<!-- <releases> <enabled>true</enabled> </releases> <snapshots> <enabled>true</enabled> 
-				</snapshots> -->
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 
-	<distributionManagement>
-		<!-- <repository> <id>Nexus.snapshot</id> <name>MyCompany Internal snapshot 
-			Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
-			</repository> -->
-		<repository>
-			<id>Nexus.release</id>
-			<name>MyCompany Internal release 
-			Repository</name>
-			<url>http://localhost:8081/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>Nexus.snapshot</id>
-			<name>MyCompany Internal snapshot Repository</name>
-			<url>http://localhost:8081/repository/maven-snapshots/</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
+	<!-- <distributionManagement> <repository> <id>Nexus.snapshot</id> <name>MyCompany 
+		Internal snapshot Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
+		</repository> <repository> <id>Nexus.release</id> <name>MyCompany Internal 
+		release Repository</name> <url>http://localhost:8081/repository/maven-releases/</url> 
+		</repository> <snapshotRepository> <id>Nexus.snapshot</id> <name>MyCompany 
+		Internal snapshot Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
+		<uniqueVersion>false</uniqueVersion> </snapshotRepository> </distributionManagement> -->
 
 	<dependencies>
 		<dependency>
