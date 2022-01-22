@@ -12,32 +12,46 @@
 	<groupId>com.example</groupId>
 	<artifactId>zdode</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- <version>1.0</version> -->
 	<packaging>war</packaging>
 	<name>zdode</name>
+	<url>https://github.com/kaki99/zdode.git</url>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 
+	<issueManagement>
+		<system>GitHub Issue Tracker</system>
+		<url>https://github.com/kaki99/zdode.git/issues</url>
+	</issueManagement>
+
 	<repositories>
 		<repository>
 			<id>Nexus</id>
 			<url>http://localhost:8081/repository/maven-public/</url>
-			<releases>
+			<!-- <releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
-			</snapshots>
+			</snapshots> -->
 		</repository>
 	</repositories>
-	
+
 	<distributionManagement>
-		<repository>
+		<!-- <repository> <id>Nexus.snapshot</id> <name>MyCompany Internal snapshot 
+			Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
+			</repository> -->
+		<!-- <repository> <id>Nexus.release</id> <name>MyCompany Internal release 
+			Repository</name> <url>http://localhost:8081/repository/maven-releases/</url> 
+			</repository> -->
+		<snapshotRepository>
 			<id>Nexus.snapshot</id>
 			<name>MyCompany Internal snapshot Repository</name>
 			<url>http://localhost:8081/repository/maven-snapshots/</url>
-		</repository>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
@@ -61,7 +75,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
