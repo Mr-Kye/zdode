@@ -21,7 +21,7 @@
 
 	<repositories>
 		<repository>
-			<id>public</id>
+			<id>Nexus</id>
 			<url>http://localhost:8081/repository/maven-public/</url>
 			<releases>
 				<enabled>true</enabled>
@@ -31,6 +31,14 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>Nexus.snapshot</id>
+			<name>MyCompany Internal snapshot Repository</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
