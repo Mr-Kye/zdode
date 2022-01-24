@@ -39,13 +39,18 @@
 		</repository>
 	</repositories>
 
-	<!-- <distributionManagement> <repository> <id>Nexus.snapshot</id> <name>MyCompany 
-		Internal snapshot Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
-		</repository> <repository> <id>Nexus.release</id> <name>MyCompany Internal 
-		release Repository</name> <url>http://localhost:8081/repository/maven-releases/</url> 
-		</repository> <snapshotRepository> <id>Nexus.snapshot</id> <name>MyCompany 
-		Internal snapshot Repository</name> <url>http://localhost:8081/repository/maven-snapshots/</url> 
-		<uniqueVersion>false</uniqueVersion> </snapshotRepository> </distributionManagement> -->
+	<distributionManagement>
+		<repository>
+			<id>Nexus.release</id>
+			<name>MyCompany Internal release Repository</name>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>Nexus.snapshot</id>
+			<name>MyCompany Internal snapshot Repository</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
